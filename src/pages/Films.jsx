@@ -8,7 +8,7 @@ const Films = () => {
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/films") // fetching films
       .then((res) => res.json())
-      .then((allFilms) => setFilms(allFilms));
+      .then((res) => setFilms(res));
   }, []);
 
   return (

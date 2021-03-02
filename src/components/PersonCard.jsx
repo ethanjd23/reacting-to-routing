@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PersonCard = (props) => {
   return (
@@ -10,9 +11,9 @@ const PersonCard = (props) => {
             <p className="card-text">
               {props.person.age}, {props.person.gender}
             </p>
-            <a target="null" href={props.person.url}>
-              go to JSON
-            </a>
+            <Link target="null" to={`/people/${props.person.id}`}>
+              go to details
+            </Link>
           </div>
         </div>
       </div>
