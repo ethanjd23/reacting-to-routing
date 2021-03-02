@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import FilmCard from "../components/FilmCard";
 
 const Films = () => {
-  const [films, setFilms] = useState("");
+  const [films, setFilms] = useState([]);
 
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/films") // fetching films
